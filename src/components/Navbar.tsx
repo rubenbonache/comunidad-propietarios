@@ -20,7 +20,6 @@ export default function Navbar() {
                         Dashboard
                     </Link>
                     <p>{session.user.name} {session.user.email}</p>
-                    <img src={session.user.image} className="w-10 h-10 rounded-full cursor-pointer" />
                     <button
                         onClick={async () => {
                             await signOut({
