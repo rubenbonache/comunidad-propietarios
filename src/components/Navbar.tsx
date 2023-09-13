@@ -16,10 +16,13 @@ export default function Navbar() {
 
             {session?.user ? (
                 <div className="flex gap-x-2 items-center">
-                    <Link  href="/dashboard">
+                    <Link href="/dashboard">
                         Dashboard
                     </Link>
-                    <p>{session.user.name} {session.user.email}</p>
+                    <Link href="/admin">
+                        Admin
+                    </Link>
+                    <p>{session.user.name}</p>
                     <button
                         onClick={async () => {
                             await signOut({
